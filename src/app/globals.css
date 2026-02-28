@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #1a3a2a;
+  --color-forest-light: #2a5a3a;
+  --color-cream: #f5f0e8;
+  --color-aged-white: #faf8f5;
+  --color-gold: #8b7355;
+  --color-gold-light: #a6896a;
+  --color-dark: #2c2c2c;
+  --color-dark-muted: #6b6b6b;
+  --color-dark-border: #e5e0d8;
+
+  /* Dark mode colors */
+  --color-dark-bg: #1a1a1a;
+  --color-dark-surface: #242424;
+  --color-dark-surface-elevated: #2e2e2e;
+  --color-dark-text: #e8e4de;
+  --color-dark-text-muted: #9a9590;
+  --color-dark-border-dark: #3a3a3a;
+  --color-dark-forest: #3d7a5a;
+  --color-dark-cream: #2a2520;
+  --color-dark-gold: #b89b7a;
+
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-dark);
+  background-color: var(--color-aged-white);
+}
+
+.dark body {
+  color: var(--color-dark-text);
+  background-color: var(--color-dark-bg);
+}
+
+/* Prose styles for article content */
+.prose {
+  max-width: 65ch;
+  line-height: 1.8;
+  font-size: 1.0625rem;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-forest);
+  line-height: 1.3;
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4 {
+  color: var(--color-dark-gold);
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.prose h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  font-size: 1.375rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--color-gold);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--color-dark-muted);
+}
+
+.dark .prose blockquote {
+  border-left-color: var(--color-dark-gold);
+  color: var(--color-dark-text-muted);
+}
+
+.prose a {
+  color: var(--color-forest);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dark .prose a {
+  color: var(--color-dark-forest);
+}
+
+.prose ul,
+.prose ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--color-dark-border);
+  margin: 2rem 0;
+}
+
+.dark .prose hr {
+  border-top-color: var(--color-dark-border-dark);
+}
