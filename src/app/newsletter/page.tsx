@@ -4,7 +4,7 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 export const metadata: Metadata = {
   title: "Newsletter",
   description:
-    "Subscribe to the Fallow Ground newsletter for theological essays, exegetical studies, and podcast updates.",
+    "Subscribe to the Fallow Ground Ministries newsletter for theological essays, exegetical studies, and podcast updates.",
 };
 
 export default function NewsletterPage() {

@@ -6,15 +6,16 @@ export function Footer() {
       <div className="mx-auto max-w-5xl px-6 py-12">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
-            <h3 className="font-serif text-lg font-semibold text-forest dark:text-dark-gold">
-              Fallow Ground
+            <h3 className="flex flex-col leading-tight">
+              <span className="font-serif text-2xl font-semibold tracking-tight text-forest dark:text-dark-gold">Fallow Ground</span>
+              <span className="font-[family-name:var(--font-baskerville)] text-[0.5rem] tracking-[0.2em] uppercase text-gold dark:text-dark-gold">Ministries</span>
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-dark-muted dark:text-dark-text-muted">
+            <p className="mt-2 font-serif text-lg leading-relaxed text-dark dark:text-dark-text">
               &ldquo;Sow for yourselves righteousness; reap in mercy; break up
               your fallow ground, for it is time to seek the Lord.&rdquo;
             </p>
-            <p className="mt-1 text-sm text-dark-muted dark:text-dark-text-muted">
-              &mdash; Hosea 10:12
+            <p className="mt-1 text-xs text-gold dark:text-dark-gold">
+              &mdash; <span className="font-[family-name:var(--font-baskerville)]">Hosea 10:12</span>
             </p>
           </div>
 

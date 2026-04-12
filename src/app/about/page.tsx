@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Emmett Yeagley and the mission of Fallow Ground — breaking up the hardened soil of neglect through biblical studies and theological reflection.",
+    "Learn about Emmett Yeagley and the mission of Fallow Ground Ministries — breaking up the hardened soil of neglect through biblical studies and theological reflection.",
 };
 
 export default function AboutPage() {
@@ -12,49 +12,17 @@ export default function AboutPage() {
       {/* Page Header */}
       <section className="bg-forest dark:bg-dark-surface">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
-          <h1 className="font-serif text-4xl font-bold text-cream md:text-5xl dark:text-dark-text">
-            About
+          <h1 className="flex flex-col">
+            <span className="font-serif text-4xl font-bold text-cream md:text-5xl dark:text-dark-text">About</span>
+            <span className="font-[family-name:var(--font-baskerville)] text-[0.5rem] tracking-[0.2em] uppercase text-cream/70 dark:text-dark-text-muted md:text-[0.6rem]">Fallow Ground Ministries</span>
           </h1>
           <p className="mt-3 text-cream/70 dark:text-dark-text-muted">
-            The man, the mission, and the meaning behind Fallow Ground.
+            The mission and the meaning behind Fallow Ground Ministries.
           </p>
         </div>
       </section>
 
       <div className="mx-auto max-w-3xl px-6 py-16 md:py-20">
-        {/* About the Author */}
-        <section>
-          <h2 className="font-serif text-2xl font-semibold text-forest dark:text-dark-gold">
-            Emmett Yeagley
-          </h2>
-          <div className="mt-6 space-y-4 leading-relaxed text-dark-muted dark:text-dark-text-muted">
-            <p>
-              Emmett Yeagley is a student of Scripture, a lover of systematic
-              theology, and a believer convinced that the church&apos;s greatest
-              need is not innovation but renovation — a return to the deep wells
-              of communion with God that have sustained the saints throughout the
-              centuries.
-            </p>
-            <p>
-              His theological interests span Reformed soteriology, biblical
-              exegesis, the doctrine of sanctification, and the intersection of
-              devotional life and doctrinal precision. He writes and teaches with
-              the conviction that sound theology is not the enemy of warm piety
-              but its truest friend.
-            </p>
-            <p>
-              Emmett believes that the quiet hour — the discipline of sustained,
-              unhurried time with God in prayer and the Word — is the single
-              most neglected practice in the Western church and the single most
-              transformative one. Fallow Ground is his effort to recover and
-              commend that practice to a new generation.
-            </p>
-          </div>
-        </section>
-
-        {/* Divider */}
-        <hr className="my-12 border-dark-border dark:border-dark-border-dark" />
-
         {/* Mission */}
         <section>
           <h2 className="font-serif text-2xl font-semibold text-forest dark:text-dark-gold">
@@ -62,7 +30,7 @@ export default function AboutPage() {
           </h2>
           <div className="mt-6 space-y-4 leading-relaxed text-dark-muted dark:text-dark-text-muted">
             <p>
-              Fallow Ground is a biblical studies and theological platform
+              Fallow Ground Ministries is a biblical studies and theological platform
               dedicated to true discipleship, deep communion with Christ, and the
               quiet hour that empowers evangelism. We are counter-cultural to
               easy believism — the notion that saving faith requires nothing of
@@ -86,7 +54,7 @@ export default function AboutPage() {
         {/* Divider */}
         <hr className="my-12 border-dark-border dark:border-dark-border-dark" />
 
-        {/* Meaning of Fallow Ground */}
+        {/* Meaning of Fallow Ground Ministries */}
         <section>
           <h2 className="font-serif text-2xl font-semibold text-forest dark:text-dark-gold">
             Why &ldquo;Fallow Ground&rdquo;?
@@ -100,7 +68,7 @@ export default function AboutPage() {
               &ldquo;Sow for yourselves righteousness; reap in mercy; break up
               your fallow ground, for it is time to seek the Lord, till He comes
               and rains righteousness on you.&rdquo;
-              <cite className="mt-2 block text-sm not-italic text-gold dark:text-dark-gold">
+              <cite className="mt-2 block font-[family-name:var(--font-baskerville)] text-sm not-italic text-gold dark:text-dark-gold">
                 &mdash; Hosea 10:12 (NKJV)
               </cite>
             </blockquote>

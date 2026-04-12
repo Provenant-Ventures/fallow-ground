@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -21,9 +22,13 @@ export function Header() {
     <header className="border-b border-dark-border bg-aged-white dark:border-dark-border-dark dark:bg-dark-bg">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link href="/" className="group">
-          <span className="font-serif text-2xl font-semibold tracking-tight text-forest dark:text-dark-gold">
-            Fallow Ground
-          </span>
+          <span className="flex items-center gap-3">
+              <Image src="/logo.png" alt="Fallow Ground Ministries" width={52} height={52} className="dark:invert" />
+              <span className="flex flex-col items-center leading-tight">
+                <span className="font-serif text-2xl font-semibold tracking-tight text-forest dark:text-dark-gold">Fallow Ground</span>
+                <span className="font-[family-name:var(--font-baskerville)] text-[0.5rem] tracking-[0.2em] uppercase text-gold dark:text-dark-gold text-center">Ministries</span>
+              </span>
+            </span>
         </Link>
 
         {/* Desktop Nav */}
