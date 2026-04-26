@@ -46,7 +46,7 @@ export default function PodcastPage() {
           <h1 className="font-serif text-4xl font-bold text-cream md:text-5xl dark:text-dark-text">
             Podcast
           </h1>
-          <p className="mt-3 text-cream/70 dark:text-dark-text-muted">
+          <p className="text-hero-lede">
             Conversations on theology, discipleship, and the quiet hour.
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function PodcastPage() {
       <div className="mx-auto max-w-3xl px-6 py-16 md:py-20">
         {/* Subscribe Banner */}
         <div className="mb-12 rounded-lg border border-dark-border bg-cream px-6 py-6 dark:border-dark-border-dark dark:bg-dark-surface">
-          <p className="text-sm leading-relaxed text-dark-muted dark:text-dark-text-muted">
+          <p className="text-sm text-muted-body">
             The Fallow Ground podcast is coming to all major platforms. Subscribe
             to the newsletter to be notified when new episodes are available on
             Apple Podcasts, Spotify, and wherever you listen.

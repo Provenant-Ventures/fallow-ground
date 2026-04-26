@@ -21,12 +21,14 @@ export function Header() {
   return (
     <header className="border-b border-dark-border bg-aged-white dark:border-dark-border-dark dark:bg-dark-bg">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="group">
+        <Link href="/" className="group link-nav rounded-sm">
           <span className="flex items-center gap-3">
               <Image src="/logo.png" alt="Fallow Ground Ministries" width={52} height={52} className="dark:invert" />
               <span className="flex flex-col items-center leading-tight">
                 <span className="font-serif text-2xl font-semibold tracking-tight text-forest dark:text-dark-gold">Fallow Ground</span>
-                <span className="font-[family-name:var(--font-baskerville)] text-[0.5rem] tracking-[0.2em] uppercase text-gold dark:text-dark-gold text-center">Ministries</span>
+                <span className="text-brand-lockup-sub text-center text-gold dark:text-dark-gold">
+                  Ministries
+                </span>
               </span>
             </span>
         </Link>
@@ -37,7 +39,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm tracking-wide transition-colors ${
+              className={`link-nav text-sm tracking-wide ${
                 pathname === link.href
                   ? "font-medium text-forest dark:text-dark-gold"
                   : "text-dark-muted hover:text-forest dark:text-dark-text-muted dark:hover:text-dark-gold"
@@ -54,7 +56,7 @@ export function Header() {
           <ThemeToggle />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-dark-muted dark:text-dark-text-muted"
+            className="link-nav rounded-md text-dark-muted dark:text-dark-text-muted"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
@@ -93,7 +95,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-sm tracking-wide transition-colors ${
+                className={`link-nav text-sm tracking-wide ${
                   pathname === link.href
                     ? "font-medium text-forest dark:text-dark-gold"
                     : "text-dark-muted hover:text-forest dark:text-dark-text-muted dark:hover:text-dark-gold"

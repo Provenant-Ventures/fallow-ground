@@ -19,7 +19,7 @@ export default function ArticlesPage() {
           <h1 className="font-serif text-4xl font-bold text-cream md:text-5xl dark:text-dark-text">
             Articles
           </h1>
-          <p className="mt-3 text-cream/70 dark:text-dark-text-muted">
+          <p className="text-hero-lede">
             Exegesis, systematic theology, and reflections on the life of
             discipleship.
           </p>
@@ -34,7 +34,7 @@ export default function ArticlesPage() {
         </div>
 
         {articles.length === 0 && (
-          <p className="text-center text-dark-muted dark:text-dark-text-muted">
+          <p className="text-center text-muted-body">
             Articles are coming soon. Check back shortly.
           </p>
         )}

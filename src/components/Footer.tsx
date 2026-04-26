@@ -8,7 +8,9 @@ export function Footer() {
           <div>
             <h3 className="flex flex-col leading-tight">
               <span className="font-serif text-2xl font-semibold tracking-tight text-forest dark:text-dark-gold">Fallow Ground</span>
-              <span className="font-[family-name:var(--font-baskerville)] text-[0.5rem] tracking-[0.2em] uppercase text-gold dark:text-dark-gold">Ministries</span>
+              <span className="text-brand-lockup-sub text-gold dark:text-dark-gold">
+                Ministries
+              </span>
             </h3>
             <p className="mt-2 font-serif text-lg leading-relaxed text-dark dark:text-dark-text">
               &ldquo;Sow for yourselves righteousness; reap in mercy; break up
@@ -26,25 +28,25 @@ export function Footer() {
             <nav className="mt-3 flex flex-col gap-2">
               <Link
                 href="/about"
-                className="text-sm text-dark-muted transition-colors hover:text-forest dark:text-dark-text-muted dark:hover:text-dark-gold"
+                className="link-nav text-sm text-dark-muted hover:text-forest dark:text-dark-text-muted dark:hover:text-dark-gold"
               >
                 About
               </Link>
               <Link
                 href="/articles"
-                className="text-sm text-dark-muted transition-colors hover:text-forest dark:text-dark-text-muted dark:hover:text-dark-gold"
+                className="link-nav text-sm text-dark-muted hover:text-forest dark:text-dark-text-muted dark:hover:text-dark-gold"
               >
                 Articles
               </Link>
               <Link
                 href="/podcast"
-                className="text-sm text-dark-muted transition-colors hover:text-forest dark:text-dark-text-muted dark:hover:text-dark-gold"
+                className="link-nav text-sm text-dark-muted hover:text-forest dark:text-dark-text-muted dark:hover:text-dark-gold"
               >
                 Podcast
               </Link>
               <Link
                 href="/newsletter"
-                className="text-sm text-dark-muted transition-colors hover:text-forest dark:text-dark-text-muted dark:hover:text-dark-gold"
+                className="link-nav text-sm text-dark-muted hover:text-forest dark:text-dark-text-muted dark:hover:text-dark-gold"
               >
                 Newsletter
               </Link>

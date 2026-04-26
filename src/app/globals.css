@@ -22,6 +22,12 @@
   --color-dark-cream: #2a2520;
   --color-dark-gold: #b89b7a;
 
+  /* Transparent / muted variants for opacity use */
+  --color-cream-80: color-mix(in srgb, #f5f0e8 80%, transparent);
+  --color-cream-70: color-mix(in srgb, #f5f0e8 70%, transparent);
+  --color-cream-60: color-mix(in srgb, #f5f0e8 60%, transparent);
+  --color-dark-text-muted-60: color-mix(in srgb, #9a9590 60%, transparent);
+
   --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
@@ -32,6 +38,8 @@ html {
 
 body {
   font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
   color: var(--color-dark);
   background-color: var(--color-aged-white);
 }
@@ -39,6 +47,58 @@ body {
 .dark body {
   color: var(--color-dark-text);
   background-color: var(--color-dark-bg);
+}
+
+@layer components {
+  /* Brand lockup subline — minimum ~11px for legibility */
+  .text-brand-lockup-sub {
+    @apply font-[family-name:var(--font-baskerville)] text-[0.6875rem] uppercase leading-tight tracking-[0.2em] md:text-xs;
+  }
+
+  /* Forest hero band: default subtitle / lede under the main title */
+  .text-hero-lede {
+    @apply mt-3 text-cream-70 dark:text-dark-text-muted;
+  }
+
+  /* Muted paragraph copy on content surfaces */
+  .text-muted-body {
+    @apply text-dark-muted leading-relaxed dark:text-dark-text-muted;
+  }
+
+  /* Small uppercase CTAs (“View all”, “Listen”, back links) */
+  .link-cta {
+    @apply text-xs font-medium uppercase tracking-wider text-gold outline-none transition-colors hover:text-forest focus-visible:ring-2 focus-visible:ring-forest/60 focus-visible:ring-offset-2 focus-visible:ring-offset-aged-white dark:text-dark-gold dark:hover:text-dark-text dark:focus-visible:ring-dark-gold/80 dark:focus-visible:ring-offset-dark-bg;
+  }
+
+  /* Nav / footer text links */
+  .link-nav {
+    @apply outline-none transition-colors focus-visible:ring-2 focus-visible:ring-forest/50 focus-visible:ring-offset-2 focus-visible:ring-offset-aged-white dark:focus-visible:ring-dark-gold/70 dark:focus-visible:ring-offset-dark-bg;
+  }
+
+  /* Text links on forest / dark-surface hero bands */
+  .link-nav-hero {
+    @apply outline-none transition-colors focus-visible:ring-2 focus-visible:ring-cream/50 focus-visible:ring-offset-2 focus-visible:ring-offset-forest dark:focus-visible:ring-dark-text/60 dark:focus-visible:ring-offset-dark-surface;
+  }
+
+  /* Attribution / cite on gold bands — must contrast with bg-gold / dark-gold */
+  .text-on-gold-meta {
+    @apply font-[family-name:var(--font-baskerville)] text-sm tracking-wider text-forest not-italic dark:text-dark-bg;
+  }
+
+  /* Primary title on gold band sections */
+  .text-on-gold-heading {
+    @apply font-serif text-2xl font-semibold text-forest dark:text-dark-bg;
+  }
+
+  /* Body copy on gold bands */
+  .text-on-gold-body {
+    @apply leading-relaxed text-dark dark:text-dark-bg/90;
+  }
+
+  /* CTA on gold band (distinct from gold-on-gold) */
+  .link-cta-on-gold {
+    @apply text-xs font-medium uppercase tracking-wider text-forest outline-none transition-colors hover:text-forest-light focus-visible:ring-2 focus-visible:ring-forest/50 focus-visible:ring-offset-2 focus-visible:ring-offset-gold dark:text-dark-bg dark:hover:text-dark-text dark:focus-visible:ring-dark-bg/60 dark:focus-visible:ring-offset-dark-gold;
+  }
 }
 
 /* Prose styles for article content */
@@ -104,10 +164,20 @@ body {
   color: var(--color-forest);
   text-decoration: underline;
   text-underline-offset: 2px;
+  border-radius: 2px;
+}
+
+.prose a:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 2px;
 }
 
 .dark .prose a {
   color: var(--color-dark-forest);
+}
+
+.dark .prose a:focus-visible {
+  outline-color: var(--color-dark-gold);
 }
 
 .prose ul,
@@ -136,4 +206,45 @@ body {
 
 .dark .prose hr {
   border-top-color: var(--color-dark-border-dark);
+}
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  background-color: color-mix(in srgb, var(--color-dark) 6%, transparent);
+  color: var(--color-forest);
+}
+
+.dark .prose code {
+  background-color: color-mix(in srgb, var(--color-dark-text) 12%, transparent);
+  color: var(--color-dark-text);
+}
+
+.prose pre {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 0.875em;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-dark-border);
+}
+
+.dark .prose pre {
+  background-color: var(--color-dark-surface);
+  border-color: var(--color-dark-border-dark);
+  color: var(--color-dark-text);
+}
+
+.prose pre code {
+  padding: 0;
+  background: none;
+  font-size: inherit;
+  color: inherit;
 }

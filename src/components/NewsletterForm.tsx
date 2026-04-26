@@ -33,11 +33,11 @@ export function NewsletterForm() {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="your@email.com"
         required
-        className="flex-1 rounded-lg border border-dark-border bg-white px-4 py-3 text-sm text-dark placeholder:text-dark-muted/60 focus:border-forest focus:outline-none focus:ring-1 focus:ring-forest dark:border-dark-border-dark dark:bg-dark-surface dark:text-dark-text dark:placeholder:text-dark-text-muted/60 dark:focus:border-dark-gold dark:focus:ring-dark-gold"
+        className="flex-1 rounded-lg border border-dark-border bg-white px-4 py-3 text-sm text-dark placeholder:text-dark-muted/60 focus:border-forest focus:outline-none focus:ring-1 focus:ring-forest dark:border-dark-border-dark dark:bg-dark-surface dark:text-dark-text dark:placeholder:text-dark-text-muted-60 dark:focus:border-dark-gold dark:focus:ring-dark-gold"
       />
       <button
         type="submit"
-        className="rounded-lg bg-forest px-6 py-3 text-sm font-medium tracking-wide text-cream transition-colors hover:bg-forest-light dark:bg-dark-forest dark:text-dark-text dark:hover:bg-dark-gold"
+        className="rounded-lg bg-forest px-6 py-3 text-sm font-medium tracking-wide text-cream outline-none transition-colors hover:bg-forest-light focus-visible:ring-2 focus-visible:ring-forest/60 focus-visible:ring-offset-2 focus-visible:ring-offset-cream dark:bg-dark-forest dark:text-dark-text dark:hover:bg-dark-gold dark:focus-visible:ring-dark-gold/80 dark:focus-visible:ring-offset-dark-surface"
       >
         Subscribe
       </button>

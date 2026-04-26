@@ -27,13 +27,16 @@ export function PodcastEpisodeCard({ episode }: { episode: PodcastEpisode }) {
             </span>
             <span>{episode.duration}</span>
           </div>
-          <h3 className="mt-1 font-serif text-lg font-semibold text-forest dark:text-dark-gold">
+          <h3 className="mt-1 font-serif text-xl font-semibold text-forest dark:text-dark-gold">
             {episode.title}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-dark-muted dark:text-dark-text-muted">
+          <p className="mt-2 text-sm text-muted-body">
             {episode.description}
           </p>
-          <button className="mt-3 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-gold transition-colors hover:text-forest dark:text-dark-gold dark:hover:text-dark-text">
+          <button
+            type="button"
+            className="link-cta mt-3 inline-flex items-center gap-2 rounded-md"
+          >
             <svg
               width="14"
               height="14"

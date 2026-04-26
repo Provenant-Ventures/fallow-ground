@@ -16,7 +16,7 @@ export default function NewsletterPage() {
           <h1 className="font-serif text-4xl font-bold text-cream md:text-5xl dark:text-dark-text">
             Newsletter
           </h1>
-          <p className="mt-3 text-cream/70 dark:text-dark-text-muted">
+          <p className="text-hero-lede">
             Receive new articles and podcast episodes directly in your inbox.
           </p>
         </div>
@@ -27,7 +27,7 @@ export default function NewsletterPage() {
           <h2 className="font-serif text-xl font-semibold text-forest dark:text-dark-gold">
             Stay Connected
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-dark-muted dark:text-dark-text-muted">
+          <p className="mt-3 text-sm text-muted-body">
             The Fallow Ground newsletter delivers thoughtful theological content
             to your inbox — exegetical essays, systematic theology reflections,
             podcast announcements, and recommended reading. No spam, no fluff.
@@ -40,12 +40,12 @@ export default function NewsletterPage() {
 
         {/* Additional context */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-dark-muted dark:text-dark-text-muted">
+          <p className="text-sm text-muted-body">
             Have a question or want to reach out directly?
           </p>
-          <p className="mt-1 text-sm text-dark-muted dark:text-dark-text-muted">
+          <p className="mt-1 text-sm text-muted-body">
             Email:{" "}
-            <span className="text-forest dark:text-dark-gold">
+            <span className="font-medium text-forest dark:text-dark-gold">
               hello@fallowground.org
             </span>
           </p>

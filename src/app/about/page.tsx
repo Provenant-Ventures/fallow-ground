@@ -14,9 +14,11 @@ export default function AboutPage() {
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <h1 className="flex flex-col">
             <span className="font-serif text-4xl font-bold text-cream md:text-5xl dark:text-dark-text">About</span>
-            <span className="font-[family-name:var(--font-baskerville)] text-[0.5rem] tracking-[0.2em] uppercase text-cream/70 dark:text-dark-text-muted md:text-[0.6rem]">Fallow Ground Ministries</span>
+            <span className="text-brand-lockup-sub text-cream-70 dark:text-dark-text-muted">
+              Fallow Ground Ministries
+            </span>
           </h1>
-          <p className="mt-3 text-cream/70 dark:text-dark-text-muted">
+          <p className="text-hero-lede">
             The mission and the meaning behind Fallow Ground Ministries.
           </p>
         </div>
@@ -28,7 +30,7 @@ export default function AboutPage() {
           <h2 className="font-serif text-2xl font-semibold text-forest dark:text-dark-gold">
             The Mission
           </h2>
-          <div className="mt-6 space-y-4 leading-relaxed text-dark-muted dark:text-dark-text-muted">
+          <div className="mt-6 space-y-4 text-muted-body">
             <p>
               Fallow Ground Ministries is a biblical studies and theological platform
               dedicated to true discipleship, deep communion with Christ, and the
@@ -59,12 +61,12 @@ export default function AboutPage() {
           <h2 className="font-serif text-2xl font-semibold text-forest dark:text-dark-gold">
             Why &ldquo;Fallow Ground&rdquo;?
           </h2>
-          <div className="mt-6 space-y-4 leading-relaxed text-dark-muted dark:text-dark-text-muted">
+          <div className="mt-6 space-y-4 text-muted-body">
             <p>
               The name comes from the prophet Hosea&apos;s urgent appeal to
               Israel:
             </p>
-            <blockquote className="border-l-3 border-gold pl-5 font-serif text-lg italic text-dark dark:border-dark-gold dark:text-dark-text">
+            <blockquote className="border-l-[3px] border-gold pl-5 font-serif text-lg italic text-dark dark:border-dark-gold dark:text-dark-text">
               &ldquo;Sow for yourselves righteousness; reap in mercy; break up
               your fallow ground, for it is time to seek the Lord, till He comes
               and rains righteousness on you.&rdquo;

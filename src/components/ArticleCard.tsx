@@ -4,7 +4,10 @@ import type { ArticleMeta } from "@/lib/articles";
 export function ArticleCard({ article }: { article: ArticleMeta }) {
   return (
     <article className="group">
-      <Link href={`/articles/${article.slug}`} className="block">
+      <Link
+        href={`/articles/${article.slug}`}
+        className="link-nav block rounded-sm outline-none"
+      >
         <div className="border-b border-dark-border pb-6 transition-colors group-hover:border-gold dark:border-dark-border-dark dark:group-hover:border-dark-gold">
           <div className="flex items-center gap-3 text-xs text-dark-muted dark:text-dark-text-muted">
             <time dateTime={article.date}>{formatDate(article.date)}</time>
@@ -22,12 +25,10 @@ export function ArticleCard({ article }: { article: ArticleMeta }) {
           <h3 className="mt-2 font-serif text-xl font-semibold text-forest transition-colors group-hover:text-gold dark:text-dark-gold dark:group-hover:text-dark-text">
             {article.title}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-dark-muted dark:text-dark-text-muted">
+          <p className="mt-2 text-sm text-muted-body">
             {article.excerpt}
           </p>
-          <span className="mt-3 inline-block text-xs font-medium uppercase tracking-wider text-gold dark:text-dark-gold">
-            Read more &rarr;
-          </span>
+          <span className="link-cta mt-3 inline-block">Read more &rarr;</span>
         </div>
       </Link>
     </article>

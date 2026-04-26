@@ -41,7 +41,7 @@ export default async function ArticlePage({ params }: PageProps) {
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <Link
             href="/articles"
-            className="text-xs font-medium uppercase tracking-wider text-cream/60 transition-colors hover:text-cream dark:text-dark-text-muted dark:hover:text-dark-text"
+            className="link-nav-hero text-xs font-medium uppercase tracking-wider text-cream/60 transition-colors hover:text-cream dark:text-dark-text-muted dark:hover:text-dark-text"
           >
             &larr; All Articles
           </Link>
@@ -76,7 +76,7 @@ export default async function ArticlePage({ params }: PageProps) {
         <div className="mt-12 border-t border-dark-border pt-8 dark:border-dark-border-dark">
           <Link
             href="/articles"
-            className="text-xs font-medium uppercase tracking-wider text-gold transition-colors hover:text-forest dark:text-dark-gold dark:hover:text-dark-text"
+            className="link-cta"
           >
             &larr; Back to all articles
           </Link>
